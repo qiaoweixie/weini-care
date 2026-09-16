@@ -1,0 +1,15 @@
+# 系統與編輯器
+.DS_Store
+Thumbs.db
+*.log
+
+# 相依套件
+node_modules/
+
+# 暫存
+*.tmp
+.cache/
+
+# 內部文件（不公開，只留本機）
+docs/
+prototypes/

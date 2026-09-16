@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="台北・台中空間全景">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F3E2DD"/>
+      <stop offset="0.55" stop-color="#EBCFC7"/>
+      <stop offset="1" stop-color="#F7F1EC"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#g)"/>
+  <circle cx="864" cy="270" r="240" fill="none" stroke="#FFFFFF" stroke-opacity="0.65"/>
+  <text x="50%" y="52%" text-anchor="middle" font-family="Huninn, 'Noto Sans TC', sans-serif" font-size="54" fill="#8F6944" letter-spacing="2">台北・台中空間全景</text>
+  <text x="50%" y="60%" text-anchor="middle" font-family="Huninn, 'Noto Sans TC', sans-serif" font-size="33" fill="#766A61">上線前請換成實拍照片</text>
+</svg>
