@@ -351,26 +351,6 @@ h1, h2, h3, h4 { font-weight: 400; }
 }
 .hero-photo img,
 .blob-photo img { width: 100%; height: 100%; object-fit: cover; }
-
-/* 首屏改用巧薇去背照：腮紅色塊、貼齊底部、不裁切 */
-.hero-photo.hero-founder {
-  background: linear-gradient(160deg, var(--color-surface-blush), var(--blush-200));
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding: 32px 20px 0;
-}
-.hero-photo.hero-founder img {
-  width: auto;
-  max-width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: bottom center;
-  filter: drop-shadow(0 14px 24px rgba(117, 92, 73, .18));
-}
-
-/* About 區：品牌色柔和圖形（無照片時） */
-.blob-photo.blob-soft { box-shadow: var(--shadow-soft); aspect-ratio: 4 / 5; min-height: 0; }
 .floating-note {
   position: absolute;
   left: 0; bottom: 42px;
@@ -605,22 +585,6 @@ h1, h2, h3, h4 { font-weight: 400; }
 .space-small { min-height: 250px; border-radius: 90px 36px 90px 36px; }
 .space-side { display: grid; gap: 20px; }
 .space-grid img { width: 100%; height: 100%; object-fit: cover; }
-/* 無照片時的空間資訊卡 */
-.space-cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-}
-.space-cards .icon svg { width: 26px; height: 26px; }
-
-/* Founder 區只留文字 */
-.story-solo {
-  max-width: 760px;
-  margin-inline: auto;
-}
-.story-solo .story-copy h3 { text-align: center; }
-.story-solo .story-copy > p { max-width: 65ch; margin-inline: auto; }
-
 .space-caption {
   margin-top: 18px;
   text-align: center;
@@ -875,27 +839,6 @@ h1, h2, h3, h4 { font-weight: 400; }
   border-color: var(--color-primary);
   box-shadow: 0 0 0 3px rgba(143, 105, 68, .18);
 }
-.field-label { font-size: 14px; color: var(--color-text); }
-.field-static {
-  margin: 0;
-  min-height: 48px;
-  padding: 10px 16px;
-  border: 1px dashed var(--color-border);
-  border-radius: 18px;
-  background: var(--color-surface-soft);
-  color: var(--color-text-muted);
-  font-size: 13px;
-  line-height: 1.5;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.field-static strong {
-  font-weight: 400;
-  font-size: 16px;
-  color: var(--color-text);
-  white-space: nowrap;
-}
 .field-error {
   margin: 8px 0 0;
   font-size: 13px;
@@ -1070,14 +1013,12 @@ fieldset { border: 0; padding: 0; margin: 0; }
   .steps { grid-template-columns: repeat(2, 1fr); }
   .reasons,
   .article-grid { grid-template-columns: 1fr; }
-  .audience-grid,
-  .space-cards { grid-template-columns: repeat(2, 1fr); }
+  .audience-grid { grid-template-columns: repeat(2, 1fr); }
   .venue,
   .footer-grid { grid-template-columns: 1fr; }
   .venue { gap: 28px; }
   .venue.reverse .venue-map { order: 0; }
   .blob-photo { min-height: 420px; }
-  .blob-soft { aspect-ratio: auto; height: 440px; max-width: 520px; margin-inline: auto; }
 }
 @media (max-width: 640px) {
   .container { width: min(100% - 32px, var(--max)); }
@@ -1097,7 +1038,6 @@ fieldset { border: 0; padding: 0; margin: 0; }
   .section { padding: 64px 0; }
   .steps,
   .audience-grid,
-  .space-cards,
   .facts,
   .form-grid { grid-template-columns: 1fr; }
   .soft-panel,
@@ -1107,7 +1047,6 @@ fieldset { border: 0; padding: 0; margin: 0; }
   .venue.reverse .venue-map { border-radius: 64px 28px 64px 28px; }
   .venue-actions .btn { flex: 1 1 auto; }
   .blob-photo { min-height: 360px; }
-  .blob-soft { height: 320px; }
   .space-large { min-height: 360px; }
   .space-small { min-height: 200px; }
   .quote { font-size: 19px; }
