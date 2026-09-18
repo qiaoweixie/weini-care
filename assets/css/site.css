@@ -138,17 +138,23 @@ h1, h2, h3, h4 { font-weight: 400; }
 }
 .brand-copy strong {
   display: block;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 400;
   color: var(--color-heading);
   line-height: 1.1;
 }
 .brand-copy span {
   display: block;
-  font-size: 11px;
+  font-size: 12px;
   color: var(--color-text-muted);
+  letter-spacing: .06em;
+  margin-top: 3px;
+  white-space: nowrap;
+}
+.brand-copy em {
+  font-style: normal;
+  font-size: 11px;
   letter-spacing: .14em;
-  margin-top: 2px;
 }
 .nav-main { flex: 1 1 auto; display: flex; justify-content: center; }
 .nav-links {
@@ -1086,7 +1092,8 @@ fieldset { border: 0; padding: 0; margin: 0; }
   .brand-logo { width: 44px; height: 44px; }
   .footer-logo { width: 72px; height: 72px; }
   .brand-copy strong { font-size: 19px; }
-  .brand-copy span { display: none; }
+  .brand-copy em { display: none; }
+  .brand-copy span { font-size: 11px; }
   .nav-cta { padding: 9px 13px; font-size: 13px; }
   .hero { padding: 48px 0 96px; }
   .hero .lead { font-size: 17px; }
