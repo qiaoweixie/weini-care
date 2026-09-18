@@ -1113,3 +1113,58 @@ fieldset { border: 0; padding: 0; margin: 0; }
   .quote { font-size: 19px; }
   .site-footer { margin-top: 64px; }
 }
+
+/* ---------- Legal page（privacy.html） ---------- */
+.legal {
+  max-width: 760px;
+  padding: 56px 0 80px;
+}
+.legal h1 {
+  margin: 0 0 6px;
+  font-size: clamp(32px, 4vw, 44px);
+  line-height: 1.2;
+  color: var(--color-heading);
+}
+.legal-meta {
+  margin: 0 0 28px;
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+.legal h2 {
+  margin: 36px 0 10px;
+  font-size: 22px;
+  color: var(--color-heading);
+}
+.legal p,
+.legal li { color: var(--color-text-muted); font-size: 16px; }
+.legal p { margin: 0 0 12px; }
+.legal ul { margin: 0 0 12px; padding-left: 1.3em; }
+.legal li { margin-bottom: 6px; }
+.legal li strong { color: var(--color-text); font-weight: 400; }
+.legal a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 3px; }
+.legal-note { margin-top: 40px; background: var(--color-surface-soft); border-color: var(--color-border); }
+.consent a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 3px; }
+
+/* ---------- 404 ---------- */
+.notfound {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  background: var(--color-surface-blush);
+}
+.notfound-logo {
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  margin-bottom: 20px;
+}
+.notfound h1 {
+  margin: 0 0 12px;
+  font-size: clamp(30px, 4vw, 44px);
+  color: var(--color-heading);
+}
+.notfound p { max-width: 460px; margin: 0 0 26px; color: var(--color-text-muted); }
+.notfound-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }

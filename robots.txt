@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /versions/
+Disallow: /google-sheet/
+
+Sitemap: https://qiaoweixie.github.io/weini-care/sitemap.xml
