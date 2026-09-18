@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>妮好，微笑生活｜午睡空間</title>
-  <meta name="description" content="妮好，微笑生活｜午睡空間。50 分鐘沉浸式睡眠體驗。台北・桃園預約制空間，給忙碌的現代人一段真正可以放下工作的休息時間。">
+  <title>妮好，薇笑生活｜午睡空間</title>
+  <meta name="description" content="妮好，薇笑生活｜午睡空間。50 分鐘沉浸式睡眠體驗。台北・桃園預約制空間，給忙碌的現代人一段真正可以放下工作的休息時間。">
   <meta name="theme-color" content="#F3E2DD">
 
   <!-- Open Graph / 社群分享 -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="zh_TW">
-  <meta property="og:site_name" content="妮好，微笑生活｜午睡空間">
+  <meta property="og:site_name" content="妮好，薇笑生活｜午睡空間">
   <meta property="og:title" content="午睡空間｜50 分鐘，讓自己重新開機。">
   <meta property="og:description" content="給忙碌的現代人、創業者與專業工作者，一段真正可以把事情放下來的休息時間。台北・桃園，採預約制。">
   <meta property="og:url" content="https://www.weini.tw/">
@@ -34,10 +34,10 @@
 
   <header class="site-header">
     <div class="container nav-bar">
-      <a class="brand" href="#home" aria-label="妮好，微笑生活｜午睡空間 首頁">
+      <a class="brand" href="#home" aria-label="妮好，薇笑生活｜午睡空間 首頁">
         <img class="brand-logo" src="assets/images/logo-pink.svg" width="56" height="56" alt="">
         <span class="brand-copy">
-          <strong>妮好，微笑生活</strong>
+          <strong>妮好，薇笑生活</strong>
           <span>午睡空間<em> · RECHARGE LOUNGE</em></span>
         </span>
       </a>
@@ -499,25 +499,14 @@
           <div class="wave" aria-hidden="true">﹌﹌﹌</div>
         </div>
 
-        <div class="article-grid">
-          <article class="card article-card">
-            <small>自在老後</small>
-            <h3>我想要的老後，不只是活得快樂，更要保有生活能力</h3>
-            <p>從長照工作開始，重新理解睡眠、活動與每天怎麼照顧自己。</p>
-            <span class="tag-soon">文章整理中</span>
-          </article>
-          <article class="card article-card">
-            <small>睡眠與休息</small>
-            <h3>睡眠影響的，不只是隔天的精神</h3>
-            <p>當睡不夠、精神不好、懶得動，生活裡可能出現哪些連動？</p>
-            <span class="tag-soon">文章整理中</span>
-          </article>
-          <article class="card article-card">
-            <small>肌力練習</small>
-            <h3>從懶得運動，到開始把重訓放進生活</h3>
-            <p>比起追求完美，我更想知道一個普通人能不能穩定地做下去。</p>
-            <span class="tag-soon">文章整理中</span>
-          </article>
+        <!-- 文章由 Blogger 自動同步：只顯示標籤「午睡空間」的最新三篇，程式在頁尾 -->
+        <div class="article-grid" id="journal-list" hidden></div>
+        <div class="journal-fallback" id="journal-fallback">
+          <p>文章整理中。想先看看巧薇平常寫些什麼，可以到部落格逛逛。</p>
+          <a class="btn btn-secondary" href="http://blog.weini.tw/" target="_blank" rel="noopener">前往部落格</a>
+        </div>
+        <div class="journal-actions" id="journal-more" hidden>
+          <a class="btn btn-secondary" href="http://blog.weini.tw/search/label/%E5%8D%88%E7%9D%A1%E7%A9%BA%E9%96%93" target="_blank" rel="noopener">更多文章</a>
         </div>
       </div>
     </section>
@@ -585,8 +574,8 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img class="footer-logo" src="assets/images/logo-white.svg" width="88" height="88" alt="妮好，微笑生活｜午睡空間" loading="lazy">
-          <strong>妮好，微笑生活｜午睡空間</strong>
+          <img class="footer-logo" src="assets/images/logo-white.svg" width="88" height="88" alt="妮好，薇笑生活｜午睡空間" loading="lazy">
+          <strong>妮好，薇笑生活｜午睡空間</strong>
           <p class="footer-text">50 分鐘的睡眠時光，讓自己重新開機。</p>
         </div>
         <div>
@@ -612,7 +601,7 @@
       <div class="footer-legal">
         <p>午睡空間不是醫療服務，也不是用來治療失眠，不提供醫療診斷或治療。</p>
         <p>本站由巧薇個人經營，內容為一般生活資訊與個人觀察，不構成醫療診斷、治療或專業醫療建議。</p>
-        <p class="copyright">© 2026 妮好，微笑生活｜午睡空間</p>
+        <p class="copyright">© 2026 妮好，薇笑生活｜午睡空間</p>
       </div>
     </div>
   </footer>
@@ -784,6 +773,89 @@
 
       setupForm('booking-form', 'booking');
       setupForm('contact-form', 'contact');
+    })();
+  </script>
+  <script>
+    // Journal：自動讀取 Blogger 標籤「午睡空間」的最新三篇。
+    // 測試其他標籤：在網址後加 ?journal=標籤名稱
+    (function () {
+      var list = document.getElementById('journal-list');
+      var fallback = document.getElementById('journal-fallback');
+      var more = document.getElementById('journal-more');
+      if (!list) return;
+
+      var BLOG_ID = '4302484093245238516';
+      var label = '午睡空間';
+      try { label = new URLSearchParams(location.search).get('journal') || label; } catch (e) {}
+      var FEED = 'https://www.blogger.com/feeds/' + BLOG_ID + '/posts/default/-/' + encodeURIComponent(label)
+        + '?alt=json-in-script&max-results=3&callback=weiniJournal';
+
+      // 8 秒沒回應就維持備援區，不讓頁面卡住
+      var timer = setTimeout(function () { window.weiniJournal = function () {}; }, 8000);
+
+      window.weiniJournal = function (data) {
+        clearTimeout(timer);
+        var entries = (data && data.feed && data.feed.entry) || [];
+        if (!entries.length) return; // 還沒有貼標籤的文章，維持備援區
+        entries.forEach(function (e) { list.appendChild(card(e)); });
+        list.hidden = false;
+        more.hidden = false;
+        fallback.hidden = true;
+      };
+
+      function el(tag, cls, text) {
+        var n = document.createElement(tag);
+        if (cls) n.className = cls;
+        if (text) n.textContent = text;
+        return n;
+      }
+      function outLink(a, url) { a.href = url; a.target = '_blank'; a.rel = 'noopener'; return a; }
+
+      function card(e) {
+        var link = (e.link || []).filter(function (l) { return l.rel === 'alternate'; })[0];
+        var url = link ? link.href : 'http://blog.weini.tw/';
+        // 部落格尚未開啟 HTTPS，先用 http；Blogger 開啟「HTTPS 可用性」後可刪掉這行
+        if (url.indexOf('https://blog.weini.tw') === 0) url = 'http' + url.slice(5);
+        var title = (e.title && e.title.$t) || '';
+        var date = ((e.published && e.published.$t) || '').slice(0, 10);
+        // 用 DOMParser 取純文字：不會執行文章裡的任何腳本或載入圖片
+        var html = (e.content && e.content.$t) || (e.summary && e.summary.$t) || '';
+        var text = '';
+        try { text = new DOMParser().parseFromString(html, 'text/html').body.textContent || ''; } catch (err) {}
+        text = text.replace(/\s+/g, ' ').trim();
+        if (text.length > 72) text = text.slice(0, 72) + '…';
+        var thumb = (e.media$thumbnail && e.media$thumbnail.url)
+          ? e.media$thumbnail.url.replace(/\/s72(-[a-z0-9]+)*\//, '/s640/') : '';
+
+        var art = el('article', 'card article-card');
+        if (thumb) {
+          var fig = outLink(el('a', 'article-thumb'), url);
+          fig.setAttribute('aria-hidden', 'true');
+          fig.tabIndex = -1;
+          var img = el('img');
+          img.src = thumb; img.alt = ''; img.loading = 'lazy';
+          fig.appendChild(img);
+          art.appendChild(fig);
+        }
+        var meta = el('div', 'article-meta');
+        // 固定顯示來源，不帶入文章的其他標籤，避免產品名稱出現在首頁
+        meta.appendChild(el('span', '', '巧薇的部落格'));
+        var t = el('time', '', date.replace(/-/g, '.'));
+        t.dateTime = date;
+        meta.appendChild(t);
+        art.appendChild(meta);
+        var h = el('h3');
+        h.appendChild(outLink(el('a', '', title), url));
+        art.appendChild(h);
+        art.appendChild(el('p', '', text));
+        art.appendChild(outLink(el('a', 'text-link', '閱讀全文'), url));
+        return art;
+      }
+
+      var s = document.createElement('script');
+      s.src = FEED;
+      s.async = true;
+      document.head.appendChild(s);
     })();
   </script>
 </body>
