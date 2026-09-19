@@ -1083,7 +1083,10 @@ fieldset { border: 0; padding: 0; margin: 0; }
   .venue { gap: 28px; }
   .venue.reverse .venue-map { order: 0; }
   .blob-photo { min-height: 420px; }
-  .blob-soft { aspect-ratio: auto; height: 440px; max-width: 520px; margin-inline: auto; }
+  /* 單欄排版時，白色光圈會壓到標題與按鈕，直接收起來 */
+  .hero::before { display: none; }
+  /* About 的粉色裝飾圖形在窄螢幕不顯示，讓文字自己說話 */
+  .blob-soft { display: none; }
 }
 @media (max-width: 640px) {
   .container { width: min(100% - 32px, var(--max)); }
@@ -1101,6 +1104,7 @@ fieldset { border: 0; padding: 0; margin: 0; }
   .hero-photo { max-width: 330px; }
   .floating-note { max-width: 200px; left: 3%; }
   .scallop { grid-template-columns: repeat(6, 1fr); }
+  .scallop span:nth-child(n + 7) { display: none; }
   .section { padding: 64px 0; }
   .steps,
   .audience-grid,
@@ -1114,7 +1118,6 @@ fieldset { border: 0; padding: 0; margin: 0; }
   .venue.reverse .venue-map { border-radius: 64px 28px 64px 28px; }
   .venue-actions .btn { flex: 1 1 auto; }
   .blob-photo { min-height: 360px; }
-  .blob-soft { height: 320px; }
   .space-large { min-height: 360px; }
   .space-small { min-height: 200px; }
   .quote { font-size: 19px; }
