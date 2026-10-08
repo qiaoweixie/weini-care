@@ -1,11 +1,14 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="zh-Hant" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>妮好，薇笑生活｜午睡空間</title>
   <meta name="description" content="妮好，薇笑生活｜午睡空間。50 分鐘沉浸式睡眠體驗。台北・桃園預約制空間，給忙碌的現代人一段真正可以放下工作的休息時間。">
-  <meta name="theme-color" content="#F3E2DD">
+  <meta name="theme-color" content="#F3E2DD" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1C1714" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
 
   <!-- Open Graph / 社群分享 -->
   <meta property="og:type" content="website">
@@ -21,18 +24,55 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://www.weini.tw/assets/images/og-cover.png">
   <link rel="canonical" href="https://www.weini.tw/">
-  <!-- 日後換自訂網域時，把 og:url、og:image、twitter:image、canonical 與 sitemap.xml、robots.txt 的網址一起換掉 -->
+  <!-- 日後換自訂網域時，把 og:url、og:image、twitter:image、canonical、下方結構化資料與 sitemap.xml、robots.txt 的網址一起換掉 -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Huninn&family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@1,9..144,300..400,100&family=Huninn&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="stylesheet" href="assets/css/site.css">
+
+  <!-- 結構化資料：讓搜尋引擎知道品牌與兩個體驗地點 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "妮好，薇笑生活｜午睡空間",
+    "alternateName": "午睡空間 Recharge Lounge",
+    "url": "https://www.weini.tw/",
+    "logo": "https://www.weini.tw/assets/images/favicon.svg",
+    "description": "50 分鐘沉浸式睡眠體驗，台北・桃園，採預約制。",
+    "sameAs": ["https://www.instagram.com/weini.care/", "https://blog.weini.tw/"],
+    "location": [
+      { "@type": "Place", "name": "逗留工作室", "address": { "@type": "PostalAddress", "streetAddress": "金山南路一段69-1號5樓", "addressLocality": "臺北市中正區", "addressCountry": "TW" } },
+      { "@type": "Place", "name": "星心相印共享空間", "address": { "@type": "PostalAddress", "streetAddress": "寶慶路552-1號1樓之4", "addressLocality": "桃園市桃園區", "addressCountry": "TW" } }
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">跳到主要內容</a>
 
-  <header class="site-header">
+  <!-- 共用圖示：用 <use href="#i-xxx"> 引用 -->
+  <svg class="icon-sprite" aria-hidden="true" focusable="false">
+    <style>.icon-sprite path, .icon-sprite circle, .icon-sprite rect { vector-effect: non-scaling-stroke; }</style>
+    <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M7 18.5h10.2a4.3 4.3 0 0 0 .6-8.56A6 6 0 0 0 6.3 9.2 4.7 4.7 0 0 0 7 18.5Z"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M19.5 14.6A7.8 7.8 0 0 1 9.4 4.5a7.8 7.8 0 1 0 10.1 10.1Z"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3.5c.5 4.2 2.3 6 6.5 6.5-4.2.5-6 2.3-6.5 6.5-.5-4.2-2.3-6-6.5-6.5 4.2-.5 6-2.3 6.5-6.5Z"/><path d="M18.5 15.5c.2 1.5.8 2.1 2.3 2.3-1.5.2-2.1.8-2.3 2.3-.2-1.5-.8-2.1-2.3-2.3 1.5-.2 2.1-.8 2.3-2.3Z"/></symbol>
+    <symbol id="i-orbit" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5"/><circle cx="12" cy="12" r="2.4"/></symbol>
+    <symbol id="i-mask" viewBox="0 0 24 24"><path d="M3 10.5c0-1.4 1.1-2.5 2.5-2.5h3c1.4 0 2.5 1.1 2.5 2.5v2c0 1.4-1.1 2.5-2.5 2.5h-3A2.5 2.5 0 0 1 3 12.5v-2Z"/><path d="M13 10.5c0-1.4 1.1-2.5 2.5-2.5h3c1.4 0 2.5 1.1 2.5 2.5v2c0 1.4-1.1 2.5-2.5 2.5h-3a2.5 2.5 0 0 1-2.5-2.5v-2Z"/><path d="M11 11.5h2M3 11H1.5M22.5 11H21"/></symbol>
+    <symbol id="i-bed" viewBox="0 0 24 24"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6"/><path d="M5 10V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3"/><path d="M3 18h18M7 10h4a1 1 0 0 1 1 1v1M13 10h4"/></symbol>
+    <symbol id="i-lamp" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0-4 10.5c.6.6 1 1.3 1 2.1V17h6v-1.4c0-.8.4-1.5 1-2.1A6 6 0 0 0 12 3Z"/><path d="M10 20h4M10 17h4"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6-5.4-6-10a6 6 0 0 1 12 0c0 4.6-6 10-6 10Z"/><circle cx="12" cy="11" r="2.2"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 3.5V17H6.5A2.5 2.5 0 0 1 4 14.5v-8Z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+    <symbol id="i-wave" viewBox="0 0 96 12"><path d="M2 6c6-5 12-5 18 0s12 5 18 0 12-5 18 0 12 5 18 0 12-5 18 0"/></symbol>
+  </svg>
+
+  <header class="site-header" id="top">
     <div class="container nav-bar">
       <a class="brand" href="#home" aria-label="妮好，薇笑生活｜午睡空間 首頁">
         <img class="brand-logo" src="assets/images/logo-pink.svg" width="56" height="56" alt="">
@@ -50,9 +90,10 @@
           <li><a href="#audience"><span class="nav-en">For You</span><span class="nav-zh">適合對象</span></a></li>
           <li><a href="#locations"><span class="nav-en">Locations</span><span class="nav-zh">體驗地點</span></a></li>
           <li><a href="#founder"><span class="nav-en">Founder</span><span class="nav-zh">關於巧薇</span></a></li>
-          <li class="nav-social-mobile">
+          <li class="nav-mobile-extra">
+            <a class="btn btn-primary" href="#reserve">預約體驗</a>
             <a class="icon-btn" href="https://www.instagram.com/weini.care/" target="_blank" rel="noopener" aria-label="Instagram @weini.care">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></svg>
+              <svg class="i" aria-hidden="true"><use href="#i-ig"/></svg>
             </a>
           </li>
         </ul>
@@ -60,7 +101,7 @@
 
       <div class="nav-right">
         <a class="icon-btn nav-social" href="https://www.instagram.com/weini.care/" target="_blank" rel="noopener" aria-label="Instagram @weini.care">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></svg>
+          <svg class="i" aria-hidden="true"><use href="#i-ig"/></svg>
         </a>
         <a class="nav-cta" href="#reserve">預約體驗</a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="開啟選單"><span></span></button>
@@ -71,38 +112,44 @@
   <main id="main">
 
     <!-- 1. Hero -->
-    <section class="hero" id="home">
+    <section class="hero" id="home" aria-labelledby="hero-title">
       <div class="container hero-grid">
-        <div>
-          <p class="kicker">RECHARGE LOUNGE · SLEEP EXPERIENCE</p>
-          <h1>50 分鐘，<br>讓自己重新開機。</h1>
-          <p class="lead">
-            給忙碌的現代人、創業者與專業工作者，一段真正可以把事情放下來的休息時間。<br>
+        <div class="hero-copy">
+          <p class="kicker" data-reveal><span lang="en">Recharge Lounge</span><span class="kicker-rule" aria-hidden="true"></span><span lang="en">Sleep Experience</span></p>
+          <h1 id="hero-title" class="hero-title">
+            <span class="line"><span>50 分鐘，</span></span>
+            <span class="line"><span>讓自己重新開機。</span></span>
+          </h1>
+          <p class="lead" data-reveal>
+            給忙碌的現代人、創業者與專業工作者，一段真正可以把事情放下來的休息時間。
             <strong>今天，你唯一的任務，就是好好休息。</strong>
           </p>
-          <ul class="hero-meta">
-            <li class="meta-chip">50 分鐘睡眠體驗</li>
-            <li class="meta-chip">台北・桃園</li>
-            <li class="meta-chip">採預約制</li>
-            <li class="meta-chip">收費制</li>
+          <ul class="hero-meta" data-reveal>
+            <li>50 分鐘睡眠體驗</li>
+            <li>台北・桃園</li>
+            <li>採預約制</li>
+            <li>收費制</li>
           </ul>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#reserve">預約體驗</a>
-            <a class="btn btn-secondary" href="#experience">看看體驗流程</a>
+          <div class="hero-actions" data-reveal>
+            <a class="btn btn-primary btn-lg" href="#reserve">預約體驗<svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-ghost btn-lg" href="#experience">看看體驗流程</a>
           </div>
         </div>
 
         <div class="hero-visual">
-          <div class="sparkle" aria-hidden="true">✦</div>
+          <div class="halo" aria-hidden="true"><span></span><span></span><span></span></div>
+          <svg class="hero-spark hero-spark-a" aria-hidden="true"><use href="#i-spark"/></svg>
+          <svg class="hero-spark hero-spark-b" aria-hidden="true"><use href="#i-spark"/></svg>
           <figure class="hero-photo hero-founder">
-            <img src="assets/images/founder.webp" width="960" height="1496" alt="歡迎來到午睡空間！享受休息吧！" fetchpriority="high">
+            <img src="assets/images/founder.webp" srcset="assets/images/founder-420.webp 420w, assets/images/founder-640.webp 640w, assets/images/founder.webp 960w" sizes="(max-width: 760px) 52vw, (max-width: 1200px) 27vw, 340px" width="960" height="1496" alt="歡迎來到午睡空間！享受休息吧！" fetchpriority="high">
           </figure>
           <div class="floating-note">
-            <small>REST IS PART OF THE PLAN</small>
+            <small lang="en">Rest is part of the plan</small>
             <strong>休息，也值得被認真安排。</strong>
           </div>
         </div>
       </div>
+      <a class="scroll-cue" href="#about"><svg class="i" aria-hidden="true"><use href="#i-down"/></svg><span>往下，慢慢看</span></a>
       <div class="scallop" aria-hidden="true">
         <span></span><span></span><span></span><span></span><span></span><span></span>
         <span></span><span></span><span></span><span></span><span></span><span></span>
@@ -110,139 +157,163 @@
     </section>
 
     <!-- 2. About -->
-    <section class="section" id="about">
-      <div class="container">
-        <div class="section-title">
-          <p class="mini">About</p>
-          <h2>我們為你留下一段<br>「什麼都不用做」的時間</h2>
-          <div class="wave" aria-hidden="true">﹌﹌﹌</div>
-        </div>
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container split">
+        <header class="section-head split-aside" data-reveal>
+          <p class="mini"><span class="idx" lang="en">01</span>About</p>
+          <h2 id="about-title"><span class="nw">我們為你留下一段</span><br><span class="nw">「什麼都不用做」</span><span class="nw">的時間</span></h2>
+          <svg class="wave" aria-hidden="true"><use href="#i-wave"/></svg>
+        </header>
 
-        <div class="story-grid">
-          <figure class="blob-photo blob-soft" aria-hidden="true">
-            <img src="assets/images/soft-blush.svg" width="960" height="1200" alt="" loading="lazy">
-          </figure>
-          <div class="story-copy">
-            <h3>你有多久，沒有認真安排休息了？</h3>
-            <p>我們願意花錢學習、工作、保養、按摩、運動，卻很少真正為自己安排一段什麼都不用做，只需要好好休息的時間。</p>
-            <p>午睡空間想做的，就是把「休息」變成一件可以被正式安排的事。</p>
-			<p>進來之後，把手機及電腦放下，把工作暫時留在外面。</p>
-			<p>戴上眼罩、躺下來、蓋好寢具。</p>
-            <blockquote class="quote">
-              這段時間，讓自己放心。<br>
-              好好睡、好好休息，再重新出發。
-            </blockquote>
-          </div>
+        <div class="story-copy split-main">
+          <h3 data-reveal>你有多久，沒有認真安排休息了？</h3>
+          <p data-reveal>我們願意花錢學習、工作、保養、按摩、運動，卻很少真正為自己安排一段什麼都不用做，只需要好好休息的時間。</p>
+          <p data-reveal>午睡空間想做的，就是把「休息」變成一件可以被正式安排的事。</p>
+          <p data-reveal>進來之後，把手機及電腦放下，把工作暫時留在外面。<br>戴上眼罩、躺下來、蓋好寢具。</p>
+          <blockquote class="quote" data-reveal>
+            這段時間，讓自己放心。<br>
+            好好睡、好好休息，再重新出發。
+          </blockquote>
         </div>
       </div>
     </section>
 
-    <!-- 3. Experience -->
-    <section class="section section-alt" id="experience">
+    <!-- 3. Experience：入夜區塊，捲動時一步一步亮起來 -->
+    <section class="section dusk" id="experience" aria-labelledby="exp-title">
+      <div class="dusk-lamp" aria-hidden="true"></div>
+      <div class="dusk-sky" aria-hidden="true">
+        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+      </div>
       <div class="container">
-        <div class="section-title">
-          <p class="mini">Experience</p>
-          <h2>50 分鐘沉浸式休息流程</h2>
+        <header class="section-head" data-reveal>
+          <p class="mini"><span class="idx" lang="en">02</span>Experience</p>
+          <h2 id="exp-title">50 分鐘沉浸式休息流程</h2>
           <p>不需要準備，只要把這段時間真正留給自己。</p>
-          <div class="wave" aria-hidden="true">﹌﹌﹌</div>
-        </div>
+        </header>
 
-        <ol class="steps">
-          <li class="step">
-            <div class="step-no" aria-hidden="true">01</div>
-            <h3>放下手機</h3>
-            <p>把訊息、工作與外界刺激暫時留在門外。</p>
-          </li>
-          <li class="step">
-            <div class="step-no" aria-hidden="true">02</div>
-            <h3>戴上眼罩</h3>
-            <p>讓視線安靜下來，慢慢切換到休息狀態。</p>
-          </li>
-          <li class="step">
-            <div class="step-no" aria-hidden="true">03</div>
-            <h3>舒服躺下</h3>
-            <p>讓身體找到一個安心、不被打擾的位置。</p>
-          </li>
-          <li class="step">
-            <div class="step-no" aria-hidden="true">04</div>
-            <h3>蓋好寢具</h3>
-            <p>感受柔軟包覆，把節奏慢慢放下來。</p>
-          </li>
-          <li class="step">
-            <div class="step-no" aria-hidden="true">05</div>
-            <h3>好好休息</h3>
-            <p>這 50 分鐘，你唯一要做的，就是休息。</p>
-          </li>
-        </ol>
+        <div class="ritual">
+          <div class="ritual-dial" aria-hidden="true">
+            <svg class="dial-svg" viewBox="0 0 240 240">
+              <g class="dial-ticks"></g>
+              <circle class="dial-track" cx="120" cy="120" r="96"/>
+              <circle class="dial-meter" cx="120" cy="120" r="96" pathLength="100"/>
+            </svg>
+            <div class="dial-core">
+              <span class="dial-num" lang="en">50</span>
+              <span class="dial-unit">分鐘，只屬於你</span>
+              <span class="dial-step" lang="en"><b data-dial-step>01</b> / 05</span>
+            </div>
+          </div>
+
+          <ol class="steps">
+            <li class="step">
+              <span class="step-no" aria-hidden="true">01</span>
+              <div>
+                <h3>放下手機</h3>
+                <p>把訊息、工作與外界刺激暫時留在門外。</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-no" aria-hidden="true">02</span>
+              <div>
+                <h3>戴上眼罩</h3>
+                <p>讓視線安靜下來，慢慢切換到休息狀態。</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-no" aria-hidden="true">03</span>
+              <div>
+                <h3>舒服躺下</h3>
+                <p>讓身體找到一個安心、不被打擾的位置。</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-no" aria-hidden="true">04</span>
+              <div>
+                <h3>蓋好寢具</h3>
+                <p>感受柔軟包覆，把節奏慢慢放下來。</p>
+              </div>
+            </li>
+            <li class="step">
+              <span class="step-no" aria-hidden="true">05</span>
+              <div>
+                <h3>好好休息</h3>
+                <p>這 50 分鐘，你唯一要做的，就是休息。</p>
+              </div>
+            </li>
+          </ol>
+        </div>
       </div>
     </section>
 
     <!-- 4. Why rest -->
     <section class="section" id="why" aria-labelledby="why-title">
       <div class="container">
-        <div class="soft-panel">
-          <div class="section-title">
-            <p class="mini">Why Rest</p>
-            <h2 id="why-title">學會把休息，放回生活裡</h2>
-            <p>我們想提供的只是一套方式，更是一段有邊界、有儀式感的休息時間。</p>
-          </div>
-          <div class="reasons">
-            <article class="card">
-              <div class="icon" aria-hidden="true">☁</div>
-              <h3>把外界暫時關小聲</h3>
-              <p>沒有一定要回的訊息，沒有需要立刻完成的事情，只要讓注意力真正有機會停下來。</p>
-            </article>
-            <article class="card">
-              <div class="icon" aria-hidden="true">☾</div>
-              <h3>建立休息儀式感</h3>
-              <p>從戴眼罩、躺下到蓋好寢具，讓休息不再只是「有空再說」。</p>
-            </article>
-            <article class="card">
-              <div class="icon" aria-hidden="true">✦</div>
-              <h3>重新整理自己的狀態</h3>
-              <p>給自己一段完全不需要表現、不需要付出的時間，再回到接下來的生活。</p>
-            </article>
-          </div>
+        <div class="soft-panel split">
+          <header class="section-head split-aside" data-reveal>
+            <p class="mini"><span class="idx" lang="en">03</span>Why Rest</p>
+            <h2 id="why-title">學會把休息，<br>放回生活裡</h2>
+            <p>我們想提供的不只是一套方式，更是一段有邊界、有儀式感的休息時間。</p>
+          </header>
+          <ul class="reasons split-main">
+            <li class="reason" data-reveal>
+              <span class="reason-icon" aria-hidden="true"><svg class="i"><use href="#i-cloud"/></svg></span>
+              <div>
+                <h3>把外界暫時關小聲</h3>
+                <p>沒有一定要回的訊息，沒有需要立刻完成的事情，只要讓注意力真正有機會停下來。</p>
+              </div>
+            </li>
+            <li class="reason" data-reveal>
+              <span class="reason-icon" aria-hidden="true"><svg class="i"><use href="#i-moon"/></svg></span>
+              <div>
+                <h3>建立休息儀式感</h3>
+                <p>從戴眼罩、躺下到蓋好寢具，讓休息不再只是「有空再說」。</p>
+              </div>
+            </li>
+            <li class="reason" data-reveal>
+              <span class="reason-icon" aria-hidden="true"><svg class="i"><use href="#i-spark"/></svg></span>
+              <div>
+                <h3>重新整理自己的狀態</h3>
+                <p>給自己一段完全不需要表現、不需要付出的時間，再回到接下來的生活。</p>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
 
     <!-- 5. Space -->
-    <section class="section" id="space">
+    <section class="section" id="space" aria-labelledby="space-title">
       <div class="container">
-        <div class="section-title">
-          <p class="mini">Space</p>
-          <h2>讓你可以安心停下來的空間</h2>
+        <header class="section-head section-head-row" data-reveal>
+          <div>
+            <p class="mini"><span class="idx" lang="en">04</span>Space</p>
+            <h2 id="space-title">讓你可以安心<br class="br-narrow">停下來的空間</h2>
+          </div>
           <p>以柔和光線、安靜氛圍、眼罩與舒適寢具，打造一個適合放鬆的午睡體驗。</p>
-          <div class="wave" aria-hidden="true">﹌﹌﹌</div>
-        </div>
+        </header>
 
-        <div class="space-cards">
-          <article class="card">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5c0-1.4 1.1-2.5 2.5-2.5h3c1.4 0 2.5 1.1 2.5 2.5v2c0 1.4-1.1 2.5-2.5 2.5h-3A2.5 2.5 0 0 1 3 12.5v-2Z"/><path d="M13 10.5c0-1.4 1.1-2.5 2.5-2.5h3c1.4 0 2.5 1.1 2.5 2.5v2c0 1.4-1.1 2.5-2.5 2.5h-3a2.5 2.5 0 0 1-2.5-2.5v-2Z"/><path d="M11 11.5h2M3 11H1.5M22.5 11H21"/></svg>
-            </div>
+        <div class="space-bento">
+          <article class="tile tile-glow" data-reveal>
+            <span class="tile-icon" aria-hidden="true"><svg class="i"><use href="#i-lamp"/></svg></span>
+            <h3>柔和光線與安靜</h3>
+            <p>沒有刺眼的燈，也沒有要處理的訊息。在這 50 分鐘裡，把外界的聲音關小聲。</p>
+          </article>
+          <article class="tile" data-reveal>
+            <svg class="tile-art" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mask"/></svg>
+            <span class="tile-icon" aria-hidden="true"><svg class="i"><use href="#i-mask"/></svg></span>
             <h3>眼罩與遮光</h3>
             <p>進來戴上眼罩，讓你的視線世界安靜下來，完全讓自己放到休息當中。</p>
           </article>
-          <article class="card">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6"/><path d="M5 10V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3"/><path d="M3 18h18M7 10h4a1 1 0 0 1 1 1v1M13 10h4"/></svg>
-            </div>
+          <article class="tile" data-reveal>
+            <svg class="tile-art" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-bed"/></svg>
+            <span class="tile-icon" aria-hidden="true"><svg class="i"><use href="#i-bed"/></svg></span>
             <h3>舒適寢具</h3>
             <p>透氣、恆溫的寢具與蓋被，讓身體找到一個安心、不被打擾的位置，把節奏慢慢放下來。</p>
           </article>
-          <article class="card">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0-4 10.5c.6.6 1 1.3 1 2.1V17h6v-1.4c0-.8.4-1.5 1-2.1A6 6 0 0 0 12 3Z"/><path d="M10 20h4M10 17h4"/></svg>
-            </div>
-            <h3>柔和光線與安靜</h3>
-            <p>沒有刺眼的燈，也要處理的訊息。在這 50 分鐘裡，把外界的聲音關小聲。</p>
-          </article>
-          <article class="card">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.4-6-10a6 6 0 0 1 12 0c0 4.6-6 10-6 10Z"/><circle cx="12" cy="11" r="2.2"/></svg>
-            </div>
+          <article class="tile tile-soft" data-reveal>
+            <svg class="tile-art" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg>
+            <span class="tile-icon" aria-hidden="true"><svg class="i"><use href="#i-pin"/></svg></span>
             <h3>到場不用摸索</h3>
             <p>預約確認時，會一併告訴你到場時間、樓層與動線。你只要準時出現，其他交給我們。</p>
           </article>
@@ -252,115 +323,117 @@
     </section>
 
     <!-- 6. Audience -->
-    <section class="section section-alt" id="audience">
+    <section class="section section-alt" id="audience" aria-labelledby="audience-title">
       <div class="container">
-        <div class="section-title">
-          <p class="mini">For You</p>
-          <h2>適合這樣的你</h2>
+        <header class="section-head section-head-row" data-reveal>
+          <div>
+            <p class="mini"><span class="idx" lang="en">05</span>For You</p>
+            <h2 id="audience-title">適合這樣的你</h2>
+          </div>
           <p>不需要有特定身分，只要你想真正休息一下，就適合來體驗。</p>
-          <div class="wave" aria-hidden="true">﹌﹌﹌</div>
-        </div>
+        </header>
 
-        <div class="audience-grid">
-          <article class="card">
-            <div class="icon" aria-hidden="true">✦</div>
+        <ul class="persona-list">
+          <li class="persona" data-reveal>
+            <span class="persona-no" aria-hidden="true">01</span>
             <h3>高壓工作者</h3>
             <p>每天訊息量大、工作節奏快，希望有一段完整安靜時間。</p>
-          </article>
-          <article class="card">
-            <div class="icon" aria-hidden="true">◌</div>
+          </li>
+          <li class="persona" data-reveal>
+            <span class="persona-no" aria-hidden="true">02</span>
             <h3>企業主・創業者</h3>
             <p>長期處理決策與責任，想把「休息」正式排進自己的行程。</p>
-          </article>
-          <article class="card">
-            <div class="icon" aria-hidden="true">☁</div>
+          </li>
+          <li class="persona" data-reveal>
+            <span class="persona-no" aria-hidden="true">03</span>
             <h3>專業人士</h3>
             <p>長時間專注輸出，希望在工作與工作之間重新整理狀態。</p>
-          </article>
-          <article class="card">
-            <div class="icon" aria-hidden="true">☾</div>
+          </li>
+          <li class="persona" data-reveal>
+            <span class="persona-no" aria-hidden="true">04</span>
             <h3>想好好休息的你</h3>
             <p>只是很久沒有允許自己安安靜靜躺下來一個小時。</p>
-          </article>
-        </div>
+          </li>
+        </ul>
       </div>
     </section>
 
     <!-- 7. Locations -->
-    <section class="section" id="locations">
+    <section class="section" id="locations" aria-labelledby="locations-title">
       <div class="container">
-        <div class="section-title">
-          <p class="mini">Locations</p>
-          <h2>台北・桃園皆可預約</h2>
+        <header class="section-head section-head-row" data-reveal>
+          <div>
+            <p class="mini"><span class="idx" lang="en">06</span>Locations</p>
+            <h2 id="locations-title">台北・桃園皆可預約</h2>
+          </div>
           <p>採預約制，可預約時段請以私訊回覆為準。</p>
-          <div class="wave" aria-hidden="true">﹌﹌﹌</div>
-        </div>
+        </header>
 
         <!-- 台北 -->
-        <article class="venue">
+        <article class="venue" data-reveal>
           <figure class="venue-map">
             <iframe
               src="https://www.google.com/maps?q=%E8%87%BA%E5%8C%97%E5%B8%82%E4%B8%AD%E6%AD%A3%E5%8D%80%E9%87%91%E5%B1%B1%E5%8D%97%E8%B7%AF%E4%B8%80%E6%AE%B569-1%E8%99%9F5%E6%A8%93&z=16&hl=zh-TW&output=embed"
               title="逗留工作室 地圖" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
           </figure>
           <div class="venue-copy">
-            <span class="venue-pill">台北｜TAIPEI</span>
+            <span class="venue-pill">台北<span lang="en">Taipei</span></span>
             <h3>逗留工作室</h3>
             <p class="venue-sub">東門站附近，走路幾分鐘就到。</p>
             <ul class="venue-rows">
               <li class="venue-row">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.4-6-10a6 6 0 0 1 12 0c0 4.6-6 10-6 10Z"/><circle cx="12" cy="11" r="2.2"/></svg>
+                <svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>
                 <span><span class="visually-hidden">地址：</span>臺北市中正區金山南路一段69-1號5樓</span>
               </li>
               <li class="venue-row">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+                <svg class="i" aria-hidden="true"><use href="#i-clock"/></svg>
                 <span><span class="visually-hidden">時段：</span>採預約制，時段以私訊確認為準</span>
               </li>
               <li class="venue-row">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 3.5V17H6.5A2.5 2.5 0 0 1 4 14.5v-8Z"/></svg>
+                <svg class="i" aria-hidden="true"><use href="#i-chat"/></svg>
                 <span><span class="visually-hidden">預約：</span><a href="#reserve">線上預約表單</a>或 Instagram 私訊 @weini.care</span>
               </li>
             </ul>
             <div class="venue-actions">
               <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&destination=%E8%87%BA%E5%8C%97%E5%B8%82%E4%B8%AD%E6%AD%A3%E5%8D%80%E9%87%91%E5%B1%B1%E5%8D%97%E8%B7%AF%E4%B8%80%E6%AE%B569-1%E8%99%9F5%E6%A8%93" target="_blank" rel="noopener">Google 導航</a>
               <a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&query=%E8%87%BA%E5%8C%97%E5%B8%82%E4%B8%AD%E6%AD%A3%E5%8D%80%E9%87%91%E5%B1%B1%E5%8D%97%E8%B7%AF%E4%B8%80%E6%AE%B569-1%E8%99%9F5%E6%A8%93" target="_blank" rel="noopener">在地圖中開啟</a>
-              <a class="social" href="https://www.instagram.com/weini.care/" target="_blank" rel="noopener" aria-label="Instagram 私訊預約">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></svg>
+              <a class="icon-btn icon-btn-lg" href="https://www.instagram.com/weini.care/" target="_blank" rel="noopener" aria-label="Instagram 私訊預約">
+                <svg class="i" aria-hidden="true"><use href="#i-ig"/></svg>
               </a>
             </div>
           </div>
         </article>
 
         <!-- 桃園 -->
-        <article class="venue reverse">
+        <article class="venue reverse" data-reveal>
           <figure class="venue-map">
             <iframe
               src="https://www.google.com/maps?q=%E6%A1%83%E5%9C%92%E5%B8%82%E6%A1%83%E5%9C%92%E5%8D%80%E5%AF%B6%E6%85%B6%E8%B7%AF552-1%E8%99%9F1%E6%A8%93%E4%B9%8B4&z=16&hl=zh-TW&output=embed"
               title="星心相印共享空間 地圖" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
           </figure>
           <div class="venue-copy">
-            <span class="venue-pill">桃園｜TAOYUAN</span>
+            <span class="venue-pill">桃園<span lang="en">Taoyuan</span></span>
             <h3>星心相印共享空間</h3>
             <p class="venue-sub">位於桃園藝文特區。</p>
             <ul class="venue-rows">
               <li class="venue-row">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.4-6-10a6 6 0 0 1 12 0c0 4.6-6 10-6 10Z"/><circle cx="12" cy="11" r="2.2"/></svg>
+                <svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>
                 <span><span class="visually-hidden">地址：</span>桃園市桃園區寶慶路552-1號1樓之4</span>
               </li>
               <li class="venue-row">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+                <svg class="i" aria-hidden="true"><use href="#i-clock"/></svg>
                 <span><span class="visually-hidden">時段：</span>採預約制，時段以私訊確認為準</span>
               </li>
               <li class="venue-row">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 3.5V17H6.5A2.5 2.5 0 0 1 4 14.5v-8Z"/></svg>
+                <svg class="i" aria-hidden="true"><use href="#i-chat"/></svg>
                 <span><span class="visually-hidden">預約：</span><a href="#reserve">線上預約表單</a>或 Instagram 私訊 @weini.care</span>
               </li>
             </ul>
             <div class="venue-actions">
               <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&destination=%E6%A1%83%E5%9C%92%E5%B8%82%E6%A1%83%E5%9C%92%E5%8D%80%E5%AF%B6%E6%85%B6%E8%B7%AF552-1%E8%99%9F1%E6%A8%93%E4%B9%8B4" target="_blank" rel="noopener">Google 導航</a>
               <a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&query=%E6%A1%83%E5%9C%92%E5%B8%82%E6%A1%83%E5%9C%92%E5%8D%80%E5%AF%B6%E6%85%B6%E8%B7%AF552-1%E8%99%9F1%E6%A8%93%E4%B9%8B4" target="_blank" rel="noopener">在地圖中開啟</a>
-              <a class="social" href="https://www.instagram.com/weini.care/" target="_blank" rel="noopener" aria-label="Instagram 私訊預約">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></svg>
+              <a class="icon-btn icon-btn-lg" href="https://www.instagram.com/weini.care/" target="_blank" rel="noopener" aria-label="Instagram 私訊預約">
+                <svg class="i" aria-hidden="true"><use href="#i-ig"/></svg>
               </a>
             </div>
           </div>
@@ -371,12 +444,12 @@
     </section>
 
     <!-- 8. Reservation -->
-    <section class="section" id="reserve">
+    <section class="section" id="reserve" aria-labelledby="reserve-title">
       <div class="container">
         <div class="reserve-panel">
-          <div class="reserve-copy">
-            <p class="mini">Reservation</p>
-            <h2>把這 50 分鐘，正式留給自己。</h2>
+          <div class="reserve-copy" data-reveal>
+            <p class="mini"><span class="idx" lang="en">07</span>Reservation</p>
+            <h2 id="reserve-title">把這 50 分鐘，正式留給自己。</h2>
             <p>如果你最近很忙、腦袋停不下來，或只是很久沒有允許自己安安靜靜休息一個小時，歡迎來體驗一次「午睡空間」。填好表單，會用你留的方式跟你確認時段。</p>
 
             <dl class="reserve-info">
@@ -462,46 +535,50 @@
     </section>
 
     <!-- 9. Founder：關於巧薇 -->
-    <section class="section section-alt" id="founder">
+    <section class="section section-alt" id="founder" aria-labelledby="founder-title">
       <div class="container">
-        <div class="section-title">
-          <p class="mini">Founder</p>
-          <h2>為什麼一個長照工作者，<br>會開始分享午睡空間</h2>
-          <div class="wave" aria-hidden="true">﹌﹌﹌</div>
-        </div>
+        <header class="section-head" data-reveal>
+          <p class="mini"><span class="idx" lang="en">08</span>Founder</p>
+          <h2 id="founder-title">為什麼一個長照工作者，<br>會開始分享午睡空間</h2>
+        </header>
 
-        <div class="story-solo">
-          <div class="story-copy">
-            <h3>我是巧薇，在長照現場工作。</h3>
-            <p>在工作裡，我看過許多不同的老化狀態。</p>
-			<p>有人到了高齡，仍能自己走路、安排生活；也有人需要協助，才能完成原本習以為常的小事。這些經驗讓我很早就開始想：<b>生活的能力，是從現在的睡眠、活動，以及每天怎麼照顧自己，慢慢累積的。</b></p>
-            <p>但我也發現，最難的不是「知道要休息」，而是真的把休息排進行程。我們總是把照顧留給別人，把自己的休息排到最後。</p>
-            <p>所以我想做一個地方，讓休息有邊界、有儀式感，不用等到「有空再說」，這就是午睡空間。</p>
-            <blockquote class="quote">把照顧別人的細心，也留一點給自己。</blockquote>
-            <div class="facts">
-              <div class="fact"><small>工作現場</small><strong>長照現場的觀察與整理</strong></div>
-              <div class="fact"><small>長期關注</small><strong>睡眠、活動與生活節奏</strong></div>
-              <div class="fact"><small>分享方式</small><strong>觀察、整理、親身實踐</strong></div>
-              <div class="fact"><small>我重視的事</small><strong>舒服、穩定、有選擇</strong></div>
-            </div>
+        <div class="founder split">
+          <figure class="founder-quote split-aside" data-reveal>
+            <blockquote><span class="nw">把照顧別人的細心，</span><span class="nw">也留一點給自己。</span></blockquote>
+            <figcaption>巧薇<span lang="en">Founder</span></figcaption>
+          </figure>
+          <div class="story-copy split-main">
+            <h3 data-reveal>我是巧薇，在長照現場工作。</h3>
+            <p data-reveal>在工作裡，我看過許多不同的老化狀態。</p>
+            <p data-reveal>有人到了高齡，仍能自己走路、安排生活；也有人需要協助，才能完成原本習以為常的小事。這些經驗讓我很早就開始想：<b>生活的能力，是從現在的睡眠、活動，以及每天怎麼照顧自己，慢慢累積的。</b></p>
+            <p data-reveal>但我也發現，最難的不是「知道要休息」，而是真的把休息排進行程。我們總是把照顧留給別人，把自己的休息排到最後。</p>
+            <p data-reveal>所以我想做一個地方，讓休息有邊界、有儀式感，不用等到「有空再說」，這就是午睡空間。</p>
+            <dl class="facts" data-reveal>
+              <div class="fact"><dt>工作現場</dt><dd>長照現場的觀察與整理</dd></div>
+              <div class="fact"><dt>長期關注</dt><dd>睡眠、活動與生活節奏</dd></div>
+              <div class="fact"><dt>分享方式</dt><dd>觀察、整理、親身實踐</dd></div>
+              <div class="fact"><dt>我重視的事</dt><dd>舒服、穩定、有選擇</dd></div>
+            </dl>
           </div>
         </div>
       </div>
     </section>
 
     <!-- 10. Journal：巧薇的生活整理 -->
-    <section class="section" id="journal">
+    <section class="section" id="journal" aria-labelledby="journal-title">
       <div class="container">
-        <div class="section-title">
-          <p class="mini">Journal</p>
-          <h2>把工作裡看見的、<br>生活裡試過的，<br>慢慢整理下來</h2>
+        <header class="section-head section-head-row" data-reveal>
+          <div>
+            <p class="mini"><span class="idx" lang="en">09</span>Journal</p>
+            <h2 id="journal-title">把工作裡看見的、<br>生活裡試過的，<br>慢慢整理下來</h2>
+          </div>
           <p>分享巧薇的生活觀察，不是睡眠知識站，只是一個普通人怎麼把休息、活動放回日常。</p>
-          <div class="wave" aria-hidden="true">﹌﹌﹌</div>
-        </div>
+        </header>
 
         <!-- 文章由 Blogger 自動同步：只顯示標籤「午睡空間」的最新三篇，程式在頁尾 -->
         <div class="article-grid" id="journal-list" hidden></div>
         <div class="journal-fallback" id="journal-fallback">
+          <svg class="i journal-fallback-icon" aria-hidden="true"><use href="#i-moon"/></svg>
           <p>文章整理中。想先看看巧薇平常寫些什麼，可以到部落格逛逛。</p>
           <a class="btn btn-secondary" href="https://blog.weini.tw/" target="_blank" rel="noopener">前往部落格</a>
         </div>
@@ -512,11 +589,11 @@
     </section>
 
     <!-- 11. Contact：預約以外的聯絡 -->
-    <section class="section section-alt" id="contact">
+    <section class="section section-alt" id="contact" aria-labelledby="contact-title">
       <div class="container contact-grid">
-        <div class="contact-copy">
-          <p class="mini">Contact</p>
-          <h2>預約以外的事，<br>寫信給巧薇</h2>
+        <div class="contact-copy" data-reveal>
+          <p class="mini"><span class="idx" lang="en">10</span>Contact</p>
+          <h2 id="contact-title">預約以外的事，<br>寫信給巧薇</h2>
           <p>想預約體驗，請用上方的<a href="#reserve">預約表單</a>，或直接 <a href="https://www.instagram.com/weini.care/" target="_blank" rel="noopener">Instagram 私訊</a>。</p>
           <p>內容合作、空間合作，或其他想聊的事，可以在這裡留下訊息。</p>
           <div class="quiet-promise">任何交流都可以，讓這個緣分，可以開啟更多的可能。</div>
@@ -572,6 +649,10 @@
 
   <footer class="site-footer">
     <div class="container">
+      <div class="footer-cta">
+        <p class="footer-statement">今天，你唯一的任務，<br>就是好好休息。</p>
+        <a class="btn btn-light btn-lg" href="#reserve">預約體驗<svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
       <div class="footer-grid">
         <div class="footer-brand">
           <img class="footer-logo" src="assets/images/logo-white.svg" width="88" height="88" alt="妮好，薇笑生活｜午睡空間" loading="lazy">
@@ -579,15 +660,15 @@
           <p class="footer-text">50 分鐘的睡眠時光，讓自己重新開機。</p>
         </div>
         <div>
-          <div class="footer-title">體驗資訊</div>
+          <p class="footer-title">體驗資訊</p>
           <p class="footer-text">
             台北・桃園皆有體驗空間<br>
             預約制・收費制<br>
             Instagram：<a href="https://www.instagram.com/weini.care/" target="_blank" rel="noopener">@weini.care</a>
           </p>
         </div>
-        <div>
-          <div class="footer-title">快速連結</div>
+        <nav aria-label="頁尾快速連結">
+          <p class="footer-title">快速連結</p>
           <div class="footer-links">
             <a class="footer-chip" href="#about">關於午睡空間</a>
             <a class="footer-chip" href="#experience">體驗流程</a>
@@ -595,7 +676,7 @@
             <a class="footer-chip" href="#reserve">預約體驗</a>
             <a class="footer-chip" href="privacy.html">個資告知</a>
           </div>
-        </div>
+        </nav>
       </div>
 
       <div class="footer-legal">
@@ -608,30 +689,140 @@
 
   <script>
     (function () {
+      var root = document.documentElement;
       var toggle = document.querySelector('.menu-toggle');
       var navLinks = document.getElementById('nav-links');
+      var header = document.querySelector('.site-header');
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
+      /* ---------- 選單（窄螢幕是全螢幕面板） ---------- */
+      function setMenu(open) {
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? '關閉選單' : '開啟選單');
+        navLinks.classList.toggle('open', open);
+        root.classList.toggle('menu-open', open);
+        header.classList.toggle('menu-open-h', open);
+      }
       toggle.addEventListener('click', function () {
-        var expanded = toggle.getAttribute('aria-expanded') === 'true';
-        toggle.setAttribute('aria-expanded', String(!expanded));
-        toggle.setAttribute('aria-label', expanded ? '開啟選單' : '關閉選單');
-        navLinks.classList.toggle('open', !expanded);
+        var open = toggle.getAttribute('aria-expanded') !== 'true';
+        setMenu(open);
+        if (open) { var first = navLinks.querySelector('a'); if (first) first.focus({ preventScroll: true }); }
       });
-
       navLinks.querySelectorAll('a').forEach(function (link) {
-        link.addEventListener('click', function () {
-          toggle.setAttribute('aria-expanded', 'false');
-          toggle.setAttribute('aria-label', '開啟選單');
-          navLinks.classList.remove('open');
-        });
+        link.addEventListener('click', function () { setMenu(false); });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && navLinks.classList.contains('open')) { setMenu(false); toggle.focus(); }
+      });
+      window.matchMedia('(min-width: 1201px)').addEventListener('change', function (m) { if (m.matches) setMenu(false); });
+
+      /* ---------- 抬頭：停在首屏最上方時透明，往下捲換成霧面底 ---------- */
+      function onScrollHeader() { header.classList.toggle('is-top', window.scrollY <= 24); }
+      onScrollHeader();
+      window.addEventListener('scroll', onScrollHeader, { passive: true });
+
+      /* ---------- 中文排版：段落最後幾個字綁在一起，避免一兩個字單獨掉到下一行 ---------- */
+      var ORPHAN_SEL = '.section-head p:not(.mini), .lead, .space-caption, .tile p, .persona p, .reason p, .step p, .story-copy p, .venue-sub, .reserve-copy > p, .reserve-note, .quiet-promise, .journal-fallback p, .contact-copy p, .footer-text';
+      document.querySelectorAll(ORPHAN_SEL).forEach(function (el) {
+        var walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null), node, last = null;
+        while ((node = walker.nextNode())) { if (node.textContent.trim()) last = node; }
+        if (!last || last.parentNode.closest('a')) return;
+        var text = last.textContent.replace(/\s+$/, '');
+        if (text.length < 10 || !/[\u3400-\u9fff]/.test(text.slice(-4))) return;
+        var tail = document.createElement('span');
+        tail.className = 'nb';
+        tail.textContent = text.slice(-4);
+        last.textContent = text.slice(0, -4);
+        last.parentNode.insertBefore(tail, last.nextSibling);
       });
 
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' && navLinks.classList.contains('open')) {
-          toggle.click();
-          toggle.focus();
+      /* ---------- 抬頭經過入夜區塊時改深色 ---------- */
+      var dusk = document.querySelector('.dusk');
+      if (dusk && 'IntersectionObserver' in window) {
+        var hh = header.offsetHeight;
+        new IntersectionObserver(function (entries) {
+          header.classList.toggle('on-dark', entries[0].isIntersecting);
+        }, { rootMargin: '0px 0px -' + (window.innerHeight - hh) + 'px 0px' }).observe(dusk);
+      }
+
+      /* ---------- 進場：區塊進入畫面時淡入 ---------- */
+      var revealEls = document.querySelectorAll('[data-reveal]');
+      if ('IntersectionObserver' in window && !reduceMotion.matches) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); }
+          });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+        revealEls.forEach(function (el) { io.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('is-in'); });
+      }
+      root.classList.add('is-loaded');
+
+      /* ---------- 入夜區塊：游標像一盞小夜燈（觸控裝置與減少動態時不啟用） ---------- */
+      if (dusk && window.matchMedia('(hover: hover) and (pointer: fine)').matches && !reduceMotion.matches) {
+        var lampFrame = 0, lx = 0, ly = 0;
+        dusk.addEventListener('pointermove', function (e) {
+          var r = dusk.getBoundingClientRect();
+          lx = e.clientX - r.left; ly = e.clientY - r.top;
+          if (!lampFrame) lampFrame = requestAnimationFrame(function () {
+            lampFrame = 0;
+            dusk.style.setProperty('--lx', lx + 'px');
+            dusk.style.setProperty('--ly', ly + 'px');
+          });
+        });
+        dusk.addEventListener('pointerenter', function () { dusk.classList.add('lamp-on'); });
+        dusk.addEventListener('pointerleave', function () { dusk.classList.remove('lamp-on'); });
+      }
+
+      /* ---------- 體驗流程：捲動時刻度與步驟一格一格亮起來 ---------- */
+      var ritual = document.querySelector('.ritual');
+      if (ritual) {
+        var steps = ritual.querySelectorAll('.step');
+        var list = ritual.querySelector('.steps');
+        var stepLabel = ritual.querySelector('[data-dial-step]');
+        var ticksG = ritual.querySelector('.dial-ticks');
+        var ticks = [];
+        // 50 格刻度，一格代表一分鐘（純裝飾）
+        if (ticksG) {
+          var ns = 'http://www.w3.org/2000/svg';
+          for (var t = 0; t < 50; t++) {
+            var a = (t / 50) * Math.PI * 2 - Math.PI / 2;
+            var r1 = t % 10 === 0 ? 104 : 108, r2 = 114;
+            var ln = document.createElementNS(ns, 'line');
+            ln.setAttribute('x1', (120 + Math.cos(a) * r1).toFixed(2));
+            ln.setAttribute('y1', (120 + Math.sin(a) * r1).toFixed(2));
+            ln.setAttribute('x2', (120 + Math.cos(a) * r2).toFixed(2));
+            ln.setAttribute('y2', (120 + Math.sin(a) * r2).toFixed(2));
+            ticksG.appendChild(ln);
+            ticks.push(ln);
+          }
         }
-      });
+        ritual.classList.add('is-live');
+        var lastActive = -1, ticking = false;
+        function updateRitual() {
+          ticking = false;
+          var vh = window.innerHeight;
+          var rect = list.getBoundingClientRect();
+          var p = (vh * 0.55 - rect.top) / Math.max(rect.height, 1);
+          p = Math.min(1, Math.max(0, p));
+          ritual.style.setProperty('--progress', p.toFixed(4));
+          var active = 0;
+          steps.forEach(function (st, i) { if (st.getBoundingClientRect().top < vh * 0.62) active = i; });
+          if (p >= 0.999) active = steps.length - 1;
+          if (active !== lastActive) {
+            steps.forEach(function (st, i) { st.classList.toggle('is-active', i === active); st.classList.toggle('is-past', i < active); });
+            if (stepLabel) stepLabel.textContent = '0' + (active + 1);
+            lastActive = active;
+          }
+          var lit = Math.round(p * ticks.length);
+          for (var k = 0; k < ticks.length; k++) ticks[k].classList.toggle('on', k < lit);
+        }
+        function requestRitual() { if (!ticking) { ticking = true; requestAnimationFrame(updateRitual); } }
+        updateRitual();
+        window.addEventListener('scroll', requestRitual, { passive: true });
+        window.addEventListener('resize', requestRitual);
+      }
 
       /* ---------- 表單 ----------
          兩個表單都寫進 Google 試算表。做法見 google-sheet/設定步驟.md：
