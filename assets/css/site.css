@@ -722,6 +722,18 @@ b, strong { font-weight: 500; }
   border-top-right-radius: 999px;
 }
 
+/* 腮紅色帶：沿用首屏的腮紅底與扇貝邊，讓下方偏白的區塊有地方換氣 */
+.section-blush {
+  --scallop-h: calc(100vw / 24); /* 12 個半圓，高是寬的一半 */
+  --color-border: rgba(167, 124, 82, .2);
+  margin-top: var(--scallop-h);
+  padding-bottom: calc(var(--section-y) + var(--scallop-h));
+  background: var(--color-surface-blush);
+}
+[data-theme="dark"] .section-blush { --color-border: rgba(244, 236, 230, .1); }
+.scallop-top { top: 1px; bottom: auto; transform: translateY(-100%); }
+.scallop-top span { background: var(--color-surface-blush); }
+
 @supports (animation-timeline: scroll()) {
   @media (prefers-reduced-motion: no-preference) and (min-width: 761px) {
     .hero-photo { animation: drift-photo linear both; animation-timeline: scroll(root); animation-range: 0 100vh; }
@@ -1589,6 +1601,7 @@ fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
   .floating-note strong { font-size: 17px; }
   .scallop { grid-template-columns: repeat(6, 1fr); }
   .scallop span:nth-child(n + 7) { display: none; }
+  .section-blush { --scallop-h: calc(100vw / 12); }
 
   :root { --section-y: var(--space-16); }
   .section-head { margin-bottom: var(--space-8); }

@@ -338,7 +338,11 @@
     </section>
 
     <!-- 6. Audience -->
-    <section class="section section-alt" id="audience" aria-labelledby="audience-title">
+    <section class="section section-blush" id="audience" aria-labelledby="audience-title">
+      <div class="scallop scallop-top" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
       <div class="container">
         <header class="section-head section-head-row" data-reveal>
           <div>
@@ -370,6 +374,10 @@
             <p>只是很久沒有允許自己安安靜靜躺下來一個小時。</p>
           </li>
         </ul>
+      </div>
+      <div class="scallop" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span>
       </div>
     </section>
 
@@ -550,7 +558,11 @@
     </section>
 
     <!-- 9. Founder：關於巧薇 -->
-    <section class="section section-alt" id="founder" aria-labelledby="founder-title">
+    <section class="section section-blush" id="founder" aria-labelledby="founder-title">
+      <div class="scallop scallop-top" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
       <div class="container">
         <header class="section-head" data-reveal>
           <p class="mini"><span class="idx" lang="en">08</span>Founder</p>
@@ -576,6 +588,10 @@
             </dl>
           </div>
         </div>
+      </div>
+      <div class="scallop" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span>
       </div>
     </section>
 
@@ -776,7 +792,7 @@
         var hh = header.offsetHeight;
         new IntersectionObserver(function (entries) {
           header.classList.toggle('on-dark', entries[0].isIntersecting);
-        }, { rootMargin: '0px 0px -' + (window.innerHeight - hh) + 'px 0px' }).observe(dusk);
+        }, { rootMargin: '0px 0px ' + -Math.max(0, window.innerHeight - hh) + 'px 0px' }).observe(dusk);
       }
 
       /* ---------- 進場：區塊進入畫面時淡入 ---------- */
